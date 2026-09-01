@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre Páginas y Estrellas — novela visual otome." />
+  <title>Entre Páginas y Estrellas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="app">
+    <section id="title-screen" class="screen title-screen">
+      <div class="ornament">✦ ✧ ✦</div>
+      <p class="eyebrow">NOVELA VISUAL · OTOME SHŌJO</p>
+      <h1>Entre Páginas<br><span>y Estrellas</span></h1>
+      <p class="subtitle">Cuatro encuentros. Cientos de decisiones. Una historia que recordará tu nombre.</p>
+      <div class="name-card">
+        <label for="player-name">¿Cómo quieres que te llamen?</label>
+        <input id="player-name" type="text" maxlength="20" autocomplete="off" placeholder="Escribe tu nombre..." />
+        <button id="start-btn" class="primary-btn">Comenzar historia</button>
+        <p id="name-error" class="error" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen game-screen hidden">
+      <header class="topbar">
+        <div><span class="mini-label">PROTAGONISTA</span><strong id="player-display"></strong></div>
+        <button id="restart-btn" class="ghost-btn">Reiniciar</button>
+      </header>
+      <div class="scene-wrap">
+        <div id="music-label" class="music-label"></div>
+        <div id="character-badge" class="character-badge hidden"></div>
+        <article class="dialogue-panel">
+          <p id="speaker" class="speaker"></p>
+          <h2 id="scene-title"></h2>
+          <p id="dialogue" class="dialogue"></p>
+          <div id="choices" class="choices"></div>
+          <button id="continue-btn" class="continue-btn hidden">Continuar →</button>
+        </article>
+      </div>
+      <aside class="relationship-panel">
+        <div class="relationship-title">Vínculos</div>
+        <div id="relationship-list" class="relationship-list"></div>
+      </aside>
+    </section>
+
+    <section id="ending-screen" class="screen ending-screen hidden">
+      <div class="ending-card">
+        <p class="eyebrow">FINAL DE RUTA</p>
+        <div id="ending-art" class="ending-art"></div>
+        <p id="ending-type" class="ending-type"></p>
+        <h1 id="ending-title"></h1>
+        <p id="ending-text" class="ending-text"></p>
+        <div id="ending-stats" class="ending-stats"></div>
+        <button id="ending-restart" class="primary-btn">Volver a jugar</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
